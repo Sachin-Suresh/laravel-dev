@@ -1,0 +1,30 @@
+site_name: Kstych
+docs:
+    images/
+        login_page.png
+nav:
+    - Getting Started: index.md
+    - Setting up the Kstych Framework: settingup-kstych.md
+
+# Extensions
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+  - attr_list
+
+# Theme Configuration
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_style: true
+    hljs_languages:
+        - yaml
+        - rust
+    font:
+      text: Times New Roman
+
+# Customization
+extra_css:
+  - stylesheets/extra.css
