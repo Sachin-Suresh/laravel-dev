@@ -7,6 +7,7 @@
     - [Why Ksytych?](#why-ksytych)
 1. [Start the Kstych Framework](#start-the-kstych-framework)
     - [Initial Setup](#initial-setup)
+    - [Installing Kstych on Windows](#installing-kstych-on-windows)
     - [Installing Kstych on Linux](#installing-kstych-on-linux)
     - [Installing Kstych on macOS](#installing-kstych-on-macos)
 1. [Next Steps](#next-steps)
@@ -42,13 +43,17 @@ Docker is a tool for running applications and services in small, light-weight "c
 <!--<aside class="note"><b>Note:</b>You must also have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">GIT</a> installed on your machine.
 </aside>-->
 
-<img src="./markups/info-markup.svg">
+<img src="./markups/git-info-markup.svg">
+
+### Installing Kstych on Windows
+
+<--content to be updated-->
 
 ### Installing Kstych on Linux
 
-If you're developing Kstych application on Linux and <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Docker</a> is already installed, you can use a simple terminal command to create a new Kstych project. For the purpose of the demonstration, let's create a simple "Blog application" in the directory named `BlogPost`.
+If you're developing Kstych application on Linux and <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Docker</a> is already installed, you can use a simple terminal command to create a new Kstych project. For the demonstration, let's create a simple "Blog application" in the directory named `BlogPost`.
 
-1. Run the following commands in your terminal:
+1. Run the stand-alone docker image using following commands:
 
         git clone https://github.com/kstych/framework
         sudo su
@@ -100,7 +105,7 @@ If you're developing Kstych application on macOS and <a href="https://docs.docke
 
 Now that you have started the Kstych framework, it is recommend that you become familiar with how the Laravel works, as the Kstych framework is built on Laravel.
 
-Following Laravel documentation would help you kick start building your first Kstych application.
+Following Laravel documentations would help you kick start building your first Kstych application.
 
 - <a href="https://laravel.com/docs/8.x/lifecycle" target="_blank">Request Lifecycle</a>
 - <a href="https://laravel.com/docs/8.x/configuration" target="_blank">Configuration</a>
