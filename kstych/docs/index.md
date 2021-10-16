@@ -30,7 +30,7 @@ Some of the built-in features of this framework include:
 
 ### Why Ksytych?
 
-The purpose of Ksytych framework is to reduce the boilerplate code by replacing the fragility of manually defining monotonous routings, controllers, model definitions, etc. Using the Ksytych framework you can get rid of memorizing the annotations at the Controller or method levels.
+The purpose of the Ksytych framework is to reduce the boilerplate code by replacing the fragility of manually defining monotonous routings, controllers, model definitions, etc. Using the Ksytych framework you can get rid of memorizing the annotations at the Controller or method levels.
 
 ## Start the Kstych Framework
 

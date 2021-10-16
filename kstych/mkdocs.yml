@@ -1,18 +1,21 @@
 site_name: Kstych
+
 docs:
     images/
         login_page.png
 nav:
     - Getting Started: index.md
-    - Understanding the Kstych Framework: understand-kstych.md
+    - Understanding the Kstych Framework: understand-ksytych.md
+    - Menus in the Kstych Application: ksytych-menus.md
+
+# Plugins
+#plugins:
+#    - pygments
+
 
 # Extensions
 markdown_extensions:
-  - pymdownx.inlinehilite
-  - pymdownx.highlight:
-      linenums_style: pymdownx-inline
-  - pymdownx.superfences
-  - attr_list
+  - codehilite
 
 # Theme Configuration
 theme:
@@ -22,6 +25,10 @@ theme:
     hljs_languages:
         - yaml
         - rust
+        - python
+        - php
+    features:
+        - content.code.annotate
     font:
       text: Times New Roman
 

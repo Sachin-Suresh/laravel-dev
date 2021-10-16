@@ -1,18 +1,19 @@
-# Understanding the Kstych Framework
+# Understanding the Ksytych Framework
 
 <font color='#7540EE'>
 
 1. [Introduction](#introduction)
-1. [Comparing Kstych and Laravel Directory Structure](#comparing-kstych-and-laravel-directory-structure)
-1. [Platform Specific Classes in Kstych](#platform-specific-classes-in-kstych)
-1. [Next Steps](#next-steps)
+1. [Comparing Ksytych and Laravel Directory Structure](#comparing-ksytych-and-laravel-directory-structure)
+1. [Mapping Folders in Laravel and Ksytych Framework](#mapping-folders-in-laravel-and-ksytych-framework)
+1. [Running Services](#running-services)
+1. [Commonly Used Libraries in Kstych Framework](#commonly-used-libraries-in-kstych-framework)
 
 </font>
 - - - -
 
 ## Introduction
 
-The Kstych directory structure is inherited from the Laravel application structure, but works based on the single-line command that is executed from the `kstych.sh` shell script file. When you run the `kstych.sh` file that is located within the `framework` directory, the following actions take place:
+The Ksytych directory structure is inherited from the Laravel application structure, but works based on the single-line command that is executed from the `kstych.sh` shell script file. When you run the `kstych.sh` file that is located within the `framework` directory, the following actions take place:
 
 - The folders `data/custom`, `data/var/lib/mysql`, and `data/etc/letsencrypt` are created in the root directory, i.e., `data` directory.
 
@@ -40,7 +41,7 @@ $COMMAND run --rm -it --shm-size=2gb \
       kstych/framework
 ```
 
-## Comparing Kstych and Laravel Directory Structure
+## Comparing Ksytych and Laravel Directory Structure
 
 You can learn more about the [Laravel directory structure](https://laravel.com/docs/8.x/structure) before understanding the Kstych directory structure.
 
@@ -77,17 +78,74 @@ The following tree structure gives an overview of the different directories and 
 
 <img src="../markups/migrate-info-markup.svg">
 
-> If you need to access the core Laravel code files within the Kstych framework, you can access them from the docker image.
->
-> 1. Navigate to **Admin**-> **Designer** menu.
-> 1. Click **Commands** option on the left pane, and click the terminal icon.
 
-> <img src="../images/core-laravel.png"/>
+## Mapping Folders in Laravel and Ksytych Framework
 
-## Platform Specific Classes in Kstych
+To avoid the issues that you might face in Laravel during (manual) folder configurations, the directories in Ksytych framework is isolated from the Laravel's directory structure.
 
-Content here...
+If you need to see how the core Laravel code files/directories are mapped within the Kstych framework, you can do so by accessing the docker image by following the below steps:
 
-## Next Steps
+1. Navigate to **Admin**-> **Designer** menu.
+1. Click **Commands** option on the left pane, and click the terminal icon.
 
-Content here...
+    <img src="../images/core-laravel.png"/>
+
+1. You can now access the Laravel directories and see their mappings with the Kstych directories. For example, change to the `app` directory, and list the files and directories using `ls -l`. You can see that the `app/Custom` Laravel's directory is mapped to the `/custom/ext/packages` path in the Ksytych framework.
+
+    <img src="../images/app_dir_mapping.png"/>
+
+    Similarly, the `tests` directory in the Laravel is mapped to `/custom/ext/packages` path in the Ksytych framework.
+
+    <img src="../images/tests_dir_mapping.png"/>
+
+
+## Running Services
+
+The Docker container automatically runs the following services when you start the Kstych framework.
+
+<img src="../markups/running-services.svg">
+
+- **httpd** : port **8080**,**4443** (you may change external ports mapping by editing the `kstych.sh` file)
+- **mariadb** : no exposed port outside
+- **asterisk** : port **8088**,**8089** used for websocket push notifications and webrtc voice/video conferencing
+- **cron** : laravel cron job runs every minute
+- **redis** : no exposed ports
+- **queue worker** : laravel queue worker that can run 10 parallel queue jobs
+- **websocket service** : event based websocket handler that connects to asterisk
+- **chromedriver** : google chrome driver for pdf generation, web automation.
+
+To view the status of all the above services, you can navigate to the **Admin**-> **Designer** menu, and click **Commands** on the left pane.
+
+<img src="../images/services_status.png"/>
+
+## Commonly Used Libraries in Kstych Framework
+
+Kstych provides you with some of the most widely used libraries. Let's take a look at some of the scenarios.
+
+**Use Case 1:** To generate PDF from URLs, you can view the `KChromePDF.php` file from the `/home/Kstych/Framework/application/app/Kstych/Browser/` directory.
+
+``` php
+<style type="text/css" media="print">
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 1200px;
+        height: 297mm;
+    }
+}
+</style>
+
+$p=new \App\Kstych\Browser\KChromePDF();
+$pdf=$p->urlToPdf("https://google.com");
+
+header("Content-type:application/pdf");
+header("Content-Disposition:attachment;filename='downloaded.pdf'");
+echo $pdf;
+```
+
+**<--To discuss other Use cases-->**
+
+
