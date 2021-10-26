@@ -6,6 +6,7 @@ docs:
 nav:
     - Getting Started: index.md
     - Understanding the Kstych Framework: understand-ksytych.md
+    - Commonly Used Libraries in Kstych Framework: commonly-used-libraries.md
     - Menus in the Kstych Application: ksytych-menus.md
 
 # Plugins

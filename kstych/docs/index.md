@@ -47,7 +47,10 @@ Docker is a tool for running applications and services in small, light-weight "c
 
 ### Installing Kstych on Windows
 
-<--content to be updated-->
+<font color='#7540EE'>
+---Pending: content to be updated---
+</font>
+
 
 ### Installing Kstych on Linux
 

@@ -6,7 +6,6 @@
 1. [Comparing Ksytych and Laravel Directory Structure](#comparing-ksytych-and-laravel-directory-structure)
 1. [Mapping Folders in Laravel and Ksytych Framework](#mapping-folders-in-laravel-and-ksytych-framework)
 1. [Running Services](#running-services)
-1. [Commonly Used Libraries in Kstych Framework](#commonly-used-libraries-in-kstych-framework)
 
 </font>
 - - - -
@@ -118,34 +117,6 @@ To view the status of all the above services, you can navigate to the **Admin**-
 
 <img src="../images/services_status.png"/>
 
-## Commonly Used Libraries in Kstych Framework
 
-Kstych provides you with some of the most widely used libraries. Let's take a look at some of the scenarios.
-
-**Use Case 1:** To generate PDF from URLs, you can view the `KChromePDF.php` file from the `/home/Kstych/Framework/application/app/Kstych/Browser/` directory.
-
-``` php
-<style type="text/css" media="print">
-@page {
-    size: A4;
-    margin: 0;
-}
-@media print {
-    html, body {
-        width: 1200px;
-        height: 297mm;
-    }
-}
-</style>
-
-$p=new \App\Kstych\Browser\KChromePDF();
-$pdf=$p->urlToPdf("https://google.com");
-
-header("Content-type:application/pdf");
-header("Content-Disposition:attachment;filename='downloaded.pdf'");
-echo $pdf;
-```
-
-**<--To discuss other Use cases-->**
 
 
