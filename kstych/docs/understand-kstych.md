@@ -1,10 +1,10 @@
-# Understanding the Ksytych Framework
+# Understanding the Kstych Framework
 
 <font color='#7540EE'>
 
 1. [Introduction](#introduction)
-1. [Comparing Ksytych and Laravel Directory Structure](#comparing-ksytych-and-laravel-directory-structure)
-1. [Mapping Folders in Laravel and Ksytych Framework](#mapping-folders-in-laravel-and-ksytych-framework)
+1. [Comparing Kstych and Laravel Directory Structure](#comparing-Kstych-and-laravel-directory-structure)
+1. [Mapping Folders in Laravel and Kstych Framework](#mapping-folders-in-laravel-and-Kstych-framework)
 1. [Running Services](#running-services)
 
 </font>
@@ -12,11 +12,11 @@
 
 ## Introduction
 
-The Ksytych directory structure is inherited from the Laravel application structure, but works based on the single-line command that is executed from the `kstych.sh` shell script file. When you run the `kstych.sh` file that is located within the `framework` directory, the following actions take place:
+The Kstych directory structure is inherited from the Laravel application structure, but works based on the single-line command that is executed from the `Kstych.sh` shell script file. When you run the `Kstych.sh` file that is located within the `framework` directory, the following actions take place:
 
 - The folders `data/custom`, `data/var/lib/mysql`, and `data/etc/letsencrypt` are created in the root directory, i.e., `data` directory.
 
-- The following snippet from the `kstych.sh` script checks if the container that you are running is *podman* or *docker*:
+- The following snippet from the `Kstych.sh` script checks if the container that you are running is *podman* or *docker*:
 
 ```
 COMMAND="podman"
@@ -30,21 +30,21 @@ fi
 
 ```
 $COMMAND run --rm -it --shm-size=2gb \
-                --network=kstych-framework \
-                --name=kstych-framework \
+                --network=Kstych-framework \
+                --name=Kstych-framework \
                 -v `pwd`/data/var/lib/mysql:/var/lib/mysql:Z \
                 -v `pwd`/data/custom:/home/Kstych/Framework/custom:Z \
                 -v `pwd`/data/etc/letsencrypt:/etc/letsencrypt:Z \
                 -p 80:80 -p 443:443 \
-                -e KSTYCH_LICENSE="$ARG1" -e KSTYCH_DOMAIN="$ARG2" -e KSTYCH_IP="$ARG3" \
-      kstych/framework
+                -e Kstych_LICENSE="$ARG1" -e Kstych_DOMAIN="$ARG2" -e Kstych_IP="$ARG3" \
+      Kstych/framework
 ```
 
-## Comparing Ksytych and Laravel Directory Structure
+## Comparing Kstych and Laravel Directory Structure
 
 You can learn more about the [Laravel directory structure](https://laravel.com/docs/8.x/structure) before understanding the Kstych directory structure.
 
-The root directory, i.e., the `data` directory created by the `kstych.sh` script file contains all application data and files in the `custom`, `etc`, and `var` directories that require persistence.
+The root directory, i.e., the `data` directory created by the `Kstych.sh` script file contains all application data and files in the `custom`, `etc`, and `var` directories that require persistence.
 
 The following tree structure gives an overview of the different directories and sub-directories in the Kstych framework and how it can be compared with the Laravel application structure.
 
@@ -53,7 +53,7 @@ The following tree structure gives an overview of the different directories and 
     ┃ ┣ 📂app                          : Comparable to Laravel `storage/app` directory
     ┃ ┃ ┣ 📂public                     : Comparable to Laravel `storage/app/public` folder
     ┃ ┃ ┗ 📂temp                       : Directory used by the application to manage temporary files
-    ┃ ┃ ┃ ┣ 📜kstych-localhost.sh      : Kstych localhost script file
+    ┃ ┃ ┃ ┣ 📜Kstych-localhost.sh      : Kstych localhost script file
     ┃ ┃ ┃ ┣ 📜oauth-private.key        : The OAuth private key file
     ┃ ┃ ┃ ┗ 📜oauth-public.key         : The OAuth public key file
     ┃ ┣ 📂ext                          : Contains custom code extensions
@@ -78,9 +78,9 @@ The following tree structure gives an overview of the different directories and 
 <img src="../markups/migrate-info-markup.svg">
 
 
-## Mapping Folders in Laravel and Ksytych Framework
+## Mapping Folders in Laravel and Kstych Framework
 
-To avoid the issues that you might face in Laravel during (manual) folder configurations, the directories in Ksytych framework is isolated from the Laravel's directory structure.
+To avoid the issues that you might face in Laravel during (manual) folder configurations, the directories in Kstych framework is isolated from the Laravel's directory structure.
 
 If you need to see how the core Laravel code files/directories are mapped within the Kstych framework, you can do so by accessing the docker image by following the below steps:
 
@@ -89,11 +89,11 @@ If you need to see how the core Laravel code files/directories are mapped within
 
     <img src="../images/core-laravel.png"/>
 
-1. You can now access the Laravel directories and see their mappings with the Kstych directories. For example, change to the `app` directory, and list the files and directories using `ls -l`. You can see that the `app/Custom` Laravel's directory is mapped to the `/custom/ext/packages` path in the Ksytych framework.
+1. You can now access the Laravel directories and see their mappings with the Kstych directories. For example, change to the `app` directory, and list the files and directories using `ls -l`. You can see that the `app/Custom` Laravel's directory is mapped to the `/custom/ext/packages` path in the Kstych framework.
 
     <img src="../images/app_dir_mapping.png"/>
 
-    Similarly, the `tests` directory in the Laravel is mapped to `/custom/ext/packages` path in the Ksytych framework.
+    Similarly, the `tests` directory in the Laravel is mapped to `/custom/ext/packages` path in the Kstych framework.
 
     <img src="../images/tests_dir_mapping.png"/>
 
@@ -104,7 +104,7 @@ The Docker container automatically runs the following services when you start th
 
 <img src="../markups/running-services.svg">
 
-- **httpd** : port **8080**,**4443** (you may change external ports mapping by editing the `kstych.sh` file)
+- **httpd** : port **8080**,**4443** (you may change external ports mapping by editing the `Kstych.sh` file)
 - **mariadb** : no exposed port outside
 - **asterisk** : port **8088**,**8089** used for websocket push notifications and webrtc voice/video conferencing
 - **cron** : laravel cron job runs every minute

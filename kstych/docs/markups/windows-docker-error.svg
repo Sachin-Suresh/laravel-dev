@@ -66,7 +66,7 @@
                         <g>
                         </g>
                     </svg>
-                    <span class="message">Suppose you want to migrate your data to a different server or environment, you just need to copy the <strong>Kstych.sh </strong> script file and the <strong>data</strong> folder.</span>
+                    <span class="message">If the above <strong>docker run</strong> command throws an error, then open the <i>data/custom/.env</i> file, and change the <strong>DB_HOST</strong> to your WiFi IP address, eg <i>192.168.0.NNN</i>. The <i>localhost/127.0.0.1</i> might sometimes do not work.</span>
                 </div>
             </div>
         </div>

@@ -66,7 +66,7 @@
                         <g>
                         </g>
                     </svg>
-                    <span class="message">Suppose you want to migrate your data to a different server or environment, you just need to copy the <strong>Kstych.sh </strong> script file and the <strong>data</strong> folder.</span>
+                    <span class="message">The best practise while creating Modules is to use capitalized naming conventions without spaces. However, the Kstych application automatically takes care of this.</span>
                 </div>
             </div>
         </div>
