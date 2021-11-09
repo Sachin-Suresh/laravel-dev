@@ -2,10 +2,7 @@
 
 **Pending items to be documented:**
 
-- Example App - BlogPost
-- Profile Menu
-- Help Menu
-- About Menu
+Done.
 
 **Discusion pending:**
 

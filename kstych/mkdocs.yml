@@ -8,7 +8,7 @@ nav:
     - Understanding the Kstych Framework: understand-kstych.md
     - Commonly Used Libraries in Kstych Framework: commonly-used-libraries.md
     - Menus in the Kstych Application: kstych-menus.md
-    - Demo Application: demo-app.md
+    - Building Your First Kstych Application: demo-app.md
     - --Pending doc--: pending_doc.md
 
 # Plugins

@@ -3,7 +3,6 @@
 The Kstych application has different menus within the Admin dashboard.
 <font color='#7540EE'>
 
-1. [Profile Menu](#profile-menu)
 1. [Admin Menu](#admin-menu)
 1. [Designer Menu](#designer-menu)
 1. [Help Menu](#help-menu)
@@ -11,10 +10,6 @@ The Kstych application has different menus within the Admin dashboard.
 
 </font>
 - - - -
-
-## Profile Menu
-
-
 
 ## Admin Menu
 
@@ -378,9 +373,9 @@ Tinker is a command-line interface that allows you to interact with your entire 
 
 ### Creating Custom Help
 
-In this section, you can create custom self-help documentation specific to your application. To do this:
+In this section, you can create custom self-help documentation specific to your application. This helps your customers understand the modules that you have developed and let them know how to use them. To create a custom help documentation:
 
-1. Go to **Admin**->**Designer**->**Help** menu.
+1. Go to **Designer**->**Help** menu.
 1. Select the `index` option from the **List** drop-down.
 1. Create the structure for the help documentation (for example, for a *BlogPost* module) as shown below as in the `.ini` format.
 1. Click **Save Help**.
@@ -392,6 +387,11 @@ You can see the documentation you created for *BlogPost* Module from the **Help*
 
 ## Help Menu
 
+The contents that you added from the [**Help** menu](/kstych-menus/#creating-custom-help) will be displayed on the left pane.
 
 
 ## About Menu
+
+The license information about the Kstych application is displayed.
+
+<img src="../images/about.png"/>
