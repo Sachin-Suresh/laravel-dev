@@ -85,7 +85,7 @@ To run Kstych on Windows, <a href="https://docs.docker.com/desktop/windows/insta
 
         docker run --name mariadb -e MARIADB_ROOT_PASSWORD=yb9738z -p 3306:3306 mariadb
 
-1. Create a working directory for the Kstych application and change to that directory.
+1. Create a working directory for the Kstych application and change it to that directory.
 
         mkdir kstych
         cd kstych
@@ -132,7 +132,7 @@ If you're developing a Kstych application on Linux and <a href="https://docs.doc
 
 ### How to Run Kstych on macOS
 
-If you're developing a Kstych application on macOS and <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Docker</a> is already installed, you can use a simple terminal command to create a new Kstych project. For the purpose of the demonstration, let's create a simple "Blog application" in the directory named `BlogPost`.
+If you're developing a Kstych application on macOS and <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Docker</a> is already installed, you can use a simple terminal command to create a new Kstych project. For demonstration, let's create a simple "Blog application" in the directory named `BlogPost`.
 
 1. Run the following commands in your terminal:
 

@@ -13,7 +13,7 @@ The Kstych application has different menus within the Admin dashboard.
 
 ## Admin Menu
 
-In this menu, you can create users, roles, access controls, and other general administrative activities. To access the Admin dashboard, click **Admin** menu on the top-right and then click **Admin**.
+In this menu, you can create users, roles, access controls, and other general administrative activities. To access the Admin dashboard, click the **Admin** menu on the top-right and then click **Admin**.
 
 <img src="../images/admin-menu.png" width="150" height="200"/>
 
@@ -67,7 +67,7 @@ You can create any number of roles and assign them to any number of users. This 
 - **Status**: *Active* (default) or *disabled*. When a new user is created, by default that user is not given the Admin role.
 - **Default**: *Yes* or *No* (default).
 - **ShowMenu**: Displays the top menu if *Yes* is selected which is default or hides the top menu if *No* is selected.
-- **UIMode**: *windows* or *default*. If the *windows* option is selected, which is a default option, all screens, if opened within the application are independent (separate dragable screens). If the *default* option is selected, the screens gets maximized.
+- **UIMode**: *windows* or *default*. If the *windows* option is selected, which is a default option, all screens, if opened within the application are independent (separate draggable screens). If the *default* option is selected, the screen gets maximized.
 - **Wallpaper**: *No* or *Role*. You can have a common wallpaper for all users or a role/user-specific wallpaper.
 
     <img src="../markups/role-wallpaper.svg">
@@ -81,7 +81,7 @@ You can create any number of roles and assign them to any number of users. This 
 ### 3. **Group module**
 </font>
 
-Suppose you want to isolate clients' data in a multi-tenant environment, then you can use *Groups* module. A group can be assigned while you are assigning a role to a user. Currently, the system has **Default** group.
+Suppose you want to isolate clients' data in a multi-tenant environment, then you can use the *Groups* module. A group can be assigned while you are assigning a role to a user. Currently, the system has a **Default** group.
 
 To create a new group:
 
@@ -103,18 +103,16 @@ You can also add multiple groups to a role.
 ### 4. **ACL module**
 </font>
 
-You can use the ACL module to limit the access of a user/role to only a few models/columns in a table. You can restrict a user to view only specfic models.
-
-<font color='#7540EE'>
----Pending: Require ACL table format from Siddhart---
-</font>
+You can use the ACL module to limit the access of a user/role to only a few models/columns in a table. You can restrict a user to view only specific models.
 
 
 <font color='#7540EE'>
 ### 5. **Sequences module**
 </font>
 
-A sequence is a set of integers/numeric values that are generated in ascending or decending order at defined intervals. To ensure that each row in your table contains a unique value, the Sequence module is used.
+A sequence is a set of integers/numeric values that are generated in ascending or descending order at defined intervals. To ensure that each row in your table contains a unique value, the Sequence module is used.
+
+<img src="../images/sequences.png"/>
 
 To understand more about sequences, refer the <a href="https://laravel.com/docs/8.x/database-testing#sequences" target="_blank">Laravel's Sequences</a> documentation.
 
@@ -133,10 +131,6 @@ To add a new configuration:
 
 <img src="../images/Ksetting.png"/>
 
-<font color='#7540EE'>
----Pending: To get sample json values from Siddhart---
-</font>
-
 
 <font color='#7540EE'>
 ### 7. **Access Logs**
@@ -146,9 +140,9 @@ Displays the different user actions by average time. For example, the below grap
 
 <img src="../images/access_logs.png"/>
 
-The table below displays request information on the different actions peformed by different users, the status code of the action, HTTP method, its URL, etc.
+The table below displays requests information on the different actions performed by different users, the status code of the action, HTTP method, its URL, etc.
 
-For debugging purpose, you can click the access log ID in the table to get more details of events that are triggered for that request cycle and the time taken for that action to complete in milliseconds. You can also expand the events to see what queries are executed.
+For debugging purposes, you can click the access log ID in the table to get more details of events that are triggered for that request cycle and the time taken for that action to complete in milliseconds. You can also expand the events to see what queries are executed.
 
 <img src="../images/access_log_table.png"/>
 
@@ -161,14 +155,10 @@ If the application sends any mails, then all the mail logs are displayed here.
 <img src="../images/mail_logs.png"/>
 
 <font color='#7540EE'>
----Pending: To get sample mail logs from Siddhart---
-</font>
-
-<font color='#7540EE'>
 ### 9. **Form Logs**
 </font>
 
-Form logs displays any logs whenever there is a change in any columns of your models. The table below displays the logs for different models, model ID, and the user who modified the model.
+Form logs display any logs whenever there is a change in any columns of your models. The table below displays the logs for different models, model ID, and the user who modified the model.
 
 <img src="../images/form_logs.png"/>
 
@@ -176,13 +166,9 @@ Form logs displays any logs whenever there is a change in any columns of your mo
 ### 10. **File Logs**
 </font>
 
-The logs of any files that you upload to the application is stored in the File Logs module. The table below displays the file logs, source of the file, MIME type etc.
+The logs of any files that you upload to the application are stored in the File Logs module. The table below displays the file logs, source of the file, MIME type, etc.
 
 <img src="../images/file_logs.png"/>
-
-<font color='#7540EE'>
----Pending: To get sample file logs from Siddhart---
-</font>
 
 
 <font color='#7540EE'>
@@ -202,17 +188,10 @@ Displays the list of users who logged in/logged out from the application.
 <img src="../images/user_logs.png"/>
 
 <font color='#7540EE'>
----Pending: To get sample users logs from Siddhart---
-</font>
-
-
-<font color='#7540EE'>
 ### 13. **Workflow Logs**
 </font>
 
-<font color='#7540EE'>
----Pending: To discuss with Siddhart---
-</font>
+<img src="../images/workflow_logs.png"/>
 
 ## Designer Menu
 
@@ -244,7 +223,7 @@ To create a new Module:
 
 #### Creating Models
 
-For the purpose of demonstration, let's create a Model named *Blog* as shown below and click **Save Settings**.
+For demonstration, let's create a Model named *Blog* as shown below and click **Save Settings**.
 
 <img src="../images/create-models.png"/>
 
@@ -286,7 +265,7 @@ Following are the columns from the below *Schema* table:
 
 <img src="../images/def_column_names.png" />
 
-All Models by default has the below six columns predefined by the system.
+All Models by default have the below six columns predefined by the system.
 
 - **id**: Automatically generated by the system
 - **created_at**: Created Date
@@ -306,7 +285,7 @@ See <a href="https://laravel.com/docs/8.x/eloquent-relationships" target="_blank
 
 ### Adding Menus to Your Application
 
-In this section, you can add menus within your application. To add a new menu to your application:
+In this section, you can add menus to your application. To add a new menu to your application:
 
 1. Enter the name of the new menu in the text field and select the type of the menu (e.g., **Vertical**) from the drop-down.
 
@@ -324,7 +303,7 @@ In this section, you can add menus within your application. To add a new menu to
 
     <img src="../images/menu-1.png"/>
 
-1. In the *Modules Section Key* field, enter the moduke key (e.g., New Menu).
+1. In the *Modules Section Key* field, enter the module key (e.g., New Menu).
 
 1. Select the modules from the drop-down where this new menu should be displayed.
 
@@ -349,7 +328,7 @@ You can activate or stop different console commands-CRON, Daemon, or Manual and 
 
 ### Environment Configuration
 
-You can use this section if you want to composer install any packages that has dependecies in your application or if you want to install any package that is not already installed. To install any package(s), you can provide a `app_require` key followed by the package name and its version, as shown in the below format:
+You can use this section if you want to composer install any packages that have dependencies in your application or if you want to install any package that is not already installed. To install any package(s), you can provide an `app_require` key followed by the package name and its version, as shown in the below format:
 
     app_require="nesbot/carbon": "^1.39|^2.0"
 
@@ -357,9 +336,52 @@ For more information, refer Laravel documentation on <a href="https://laravel.co
 
 ### Workflows
 
-<font color='#7540EE'>
----Pending: To discuss with Siddhart---
-</font>
+Workflows are sequence of steps that is executed by the system. These steps can then be designed later by the end-users without having to know much of the application code.
+
+For example, in an Employee Onboarding application, the major process handled by the HR involve paperwork preparation, orientation stage, integration, engagement, etc. These sequence of steps can be designed in this Workflow module.
+
+To add a new Workflow for your application:
+
+1. Go to **Admin**->**Designer**->**Workflows**.
+1. Click **Add New**.
+
+    <img src="../images/add_workflow.png" />
+
+    <img src="../images/new_workflow.png" />
+
+1. In the first column, provide the workflow details like name of your workflow, its version, whether you want to activate or disable the workflow, etc.
+
+    <img src="../images/workflow_col1.png"  width="350"/>
+
+1. In the second column, you can link the workflow to a specific Module, Model. The **Type** drop-down consists of events (manual and automatic) that defines how or when you want the workflow to be triggered.
+
+    <img src="../images/workflow_col2.png" width="350"/>
+
+    For example, *Ext.Get*, *Ext.Post* are events that needs to be manually provided a value. Similarly, *Cron.At* requires a cron sequence value for the workflow to trigger; which is to be provided in the **Value** field.
+
+1. In the third column, in the **Multiple** field, you can configure a single workflow to run in multiples (e.g., setting **Multiple** field to '0' means you can run that workflow "unlimited" number of times).
+
+    **ExpireMin** field: The expiry time if your workflow does not complete in specific time.
+
+    **Log** field: If set to **Yes**, it saves the Workflow log–completed or failed. Workflow logs can be access from <a href="/kstych-menus/#13-workflow-logs" target="_blank">here</a>.
+
+    **Custom** field: Accepts full class path including namespace. It is used if you want to trigger a class before your workflow triggers.
+
+    <img src="../images/workflow_col3.png" width="350"/>
+
+    Some example of Workflows can be seen below:
+
+    **Example 1: Work permit application**
+
+    <img src="../images/workflow_example_workpermit.png"/>
+
+    **Example 2: Salary deduction approval**
+
+    <img src="../images/workflow_salary_ded_approval.png"/>
+
+
+
+
 
 ### Custom
 
@@ -373,14 +395,14 @@ Tinker is a command-line interface that allows you to interact with your entire 
 
 ### Creating Custom Help
 
-In this section, you can create custom self-help documentation specific to your application. This helps your customers understand the modules that you have developed and let them know how to use them. To create a custom help documentation:
+In this section, you can create custom self-help documentation specific to your application. This helps your customers understand the modules that you have developed and let them know how to use them. To create custom help documentation:
 
 1. Go to **Designer**->**Help** menu.
 1. Select the `index` option from the **List** drop-down.
 1. Create the structure for the help documentation (for example, for a *BlogPost* module) as shown below as in the `.ini` format.
 1. Click **Save Help**.
 
-You can see the documentation you created for *BlogPost* Module from the **Help** menu as shown in the below screenshot:
+You can see the documentation you created for the *BlogPost* Module from the **Help** menu as shown in the below screenshot:
 
 <img src="../images/help-1.png"/>
 

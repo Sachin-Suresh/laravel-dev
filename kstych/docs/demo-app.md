@@ -10,7 +10,7 @@ Now that you have understood the basics of the Kstych framework, how about we bu
 
 # Blog Application in Kstych framework
 
-Let's create a simple blog application using Kstych framework
+Let's create a simple blog application using the Kstych framework
 
 ### Setup the Kstych framework
 
@@ -22,7 +22,7 @@ Let's create a simple blog application using Kstych framework
 
         git clone https://github.com/kstych/framework
 
-1. Switch to the super user and change to the `framework` directory.
+1. Switch to the superuser and change to the `framework` directory.
 
         sudo su
         cd framework
@@ -33,7 +33,7 @@ Let's create a simple blog application using Kstych framework
 
 ### Create the BlogPost Module and Model
 
-Go to the **Designer** page and click **Modules**. Create the a new Module named `BlogPost` and a Model named `Post`. You can choose a different Module and Model name of your choice. Click **Save Settings**.
+Go to the **Designer** page and click **Modules**. Create a new Module named `BlogPost` and a Model named `Post`. You can choose a different Module and Model name of your choice. Click **Save Settings**.
 
 <img src="../images/demo_application_images/create_module.png" />
 
@@ -57,7 +57,7 @@ Once you have the Module created, you need to provide access to the Module. To d
 
     <img src="../images/demo_application_images/columns.png" />
 
-### Create Controller, Asets, and Views for the application
+### Create Controller, Assets, and Views for the application
 
 #### Create Controller
 
@@ -73,7 +73,7 @@ Following is an example directory structure for creating Controllers within the 
 
 <img src="../images/demo_application_images/sample_dir_str.png" width="250" height="200" />
 
-Following is the sample `BlogPost.php` controller code that uses the basic resource controllers and is customized with SQL queries to do perform the CRUD operations-insert,delete and update in `posts` table.
+Following is the sample `BlogPost.php` controller code that uses the basic resource controllers and is customized with SQL queries to do perform the CRUD operations-insert, delete and update in the `posts` table.
 
 **Contoller:** `/custom/ext/packages/BlogPost/Controller/BlogPost.php`
 
@@ -176,11 +176,11 @@ In the above code snippet, following are the methods used:
 In the **views** folder, you store all the template files required for your application. To add templates into the **views** directory:
 
 1. In the **Designer** page and click **Custom**.
-1. Locate the **views** directory and create a new directory with the same name as your Module name, but in *small case* (in this example, it is `blogpost`). Within the **blogpost** directory, you can add all your application template files.
+1. Locate the **views** directory and create a new directory with the same name as your Module name, but in *small case* (in this example, it is `blogpost`). Within the **blog post** directory, you can add all your application template files.
 
     <img src="../images/demo_application_images/views.png" />
 
-1. In this example, lets create a file name `template.blade.php` or any file name that is suitable. Add the below content and save the file.
+1. In this example, let's create a file name `template.blade.php` or any suitable file name. Add the below content and save the file.
 
     **Template file:** `/custom/ext/views/blogpost/template.blade.php`
 
@@ -230,7 +230,7 @@ In the **views** folder, you store all the template files required for your appl
         </body>
         </html>
 
-1. Now, lets create template files to display our blog post. Create an index template file-`index.blade.php` (it is suggested to use the same file name to use the default routes).
+1. Now, let's create template files to display our blog posts. Create an index template file-`index.blade.php` (it is suggested to use the same file name to use the default routes).
 
     <img src="../markups/default-route.svg">
 
@@ -273,7 +273,7 @@ In the **views** folder, you store all the template files required for your appl
 
     <img src="../images/demo_application_images/blog-output-1.png" />
 
-1. Now, lets add another template file- `create.blade.php` for creating a blog post.
+1. Now, let's add another template file- `create.blade.php` for creating a blog post.
 
     **Template file to create a blog post:** `/custom/ext/views/blogpost/create.blade.php`
 
@@ -315,7 +315,7 @@ In the **views** folder, you store all the template files required for your appl
 
     <img src="../images/demo_application_images/blog-output-2.png" />
 
-1. Following is another template file which displays the blog post details -`show.blade.php`
+1. Following is another template file that displays the blog post details -`show.blade.php`
 
     **Template file to display a blog details page:** `/custom/ext/views/blogpost/show.blade.php`
 
@@ -386,7 +386,7 @@ In the **views** folder, you store all the template files required for your appl
 
     <img src="../images/demo_application_images/blog-output-3.png" />
 
-1. For deleting a post, you need to send the delete request to controller to execute the `destroy()` method, and you post will be deleted.
+1. For deleting a post, you need to send the delete request to the controller to execute the `destroy()` method, and your post will be deleted.
 
     For example, you can use the below code snippet to delete the post.
 
