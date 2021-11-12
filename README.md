@@ -3,7 +3,7 @@
 Follow the steps to view the documentation:
 
 1. git clone this repo.
-2. Navigate to the `docs` directory which is the root of the mkdocs theme.
+2. Navigate to the `kstych` directory which is the root of the mkdocs theme.
 3. Run the command: `mkdocs serve`.
 
 Note: 
